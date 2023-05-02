@@ -18,7 +18,7 @@ perimetre.onchange = function () {
 
     rayon.value = number / (2 * Math.PI)
     let newRayon = Number(rayon.value)
-    diametre.value = newRayon * 2
+    diametre.value = number / Math.PI
     aire.value = Math.PI * newRayon * newRayon
 }
 
