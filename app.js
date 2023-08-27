@@ -2,40 +2,61 @@ let perimetre = document.getElementById('perimetre')
 let aire = document.getElementById('aire')
 let diametre = document.getElementById('diametre')
 let rayon = document.getElementById('rayon')
-let button = document.querySelector('button')
+let calcul = document.getElementById('calcul')
+let btnReset = document.getElementById('btnReset')
+let Tau = Math.PI * 2
 
 rayon.onchange = function () {
     let number = Number(rayon.value)
 
-    perimetre.value = 2 * Math.PI * number
-    aire.value = Math.PI * number * number
-    diametre.value = number * 2
+    perimetre.value = (Tau * number).toFixed(3)
+    aire.value = (Math.PI * number * number).toFixed(3)
+    diametre.value = (number * 2).toFixed(3)
 
+    rayonE()
 }
 
 perimetre.onchange = function () {
     let number = Number(perimetre.value)
 
-    rayon.value = number / (2 * Math.PI)
-    let newRayon = Number(rayon.value)
-    diametre.value = number / Math.PI
-    aire.value = Math.PI * newRayon * newRayon
+    rayon.value = (number / Tau).toFixed(3)
+    let newRayon = (Number(rayon.value)).toFixed(3)
+    diametre.value = (number / Math.PI).toFixed(3)
+    aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
+
+    perimetreE()
 }
 
 aire.onchange = function () {
     let number = Number(aire.value)
 
-    rayon.value = Math.sqrt(number / Math.PI)
-    let newRayon = Number(rayon.value)
-    perimetre.value = 2 * Math.PI * newRayon
-    diametre.value = newRayon * 2
+    rayon.value = (Math.sqrt(number / Math.PI)).toFixed(3)
+    let newRayon = (Number(rayon.value)).toFixed(3)
+    perimetre.value = (Tau * newRayon).toFixed(3)
+    diametre.value = (newRayon * 2).toFixed(3)
+
+    aireE()
 }
 
 diametre.onchange = function () {
     let number = Number(diametre.value)
 
-    rayon.value = number / 2
-    let newRayon = Number(rayon.value)
-    perimetre.value = 2 * Math.PI * newRayon
-    aire.value = Math.PI * newRayon * newRayon
+    rayon.value = (number / 2).toFixed(3)
+    let newRayon = (Number(rayon.value)).toFixed(3)
+    perimetre.value = (Tau * newRayon).toFixed(3)
+    aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
+
+    diametreE()
+}
+
+
+
+btnReset.onclick = function () {
+
+    perimetre.value = ""
+    aire.value = ""
+    diametre.value = ""
+    rayon.value = ""
+    let ajout = document.querySelector('.equation');
+    ajout.innerHTML = "";
 }
