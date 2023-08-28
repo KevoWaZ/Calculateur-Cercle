@@ -9,44 +9,60 @@ let Tau = Math.PI * 2
 rayon.onchange = function () {
     let number = Number(rayon.value)
 
-    perimetre.value = (Tau * number).toFixed(3)
-    aire.value = (Math.PI * number * number).toFixed(3)
-    diametre.value = (number * 2).toFixed(3)
-
-    rayonE()
+    if (number <= 0) {
+        alert("Entrez un nombre positif!!!")
+    } else {
+        perimetre.value = (Tau * number).toFixed(3)
+        aire.value = (Math.PI * number * number).toFixed(3)
+        diametre.value = (number * 2).toFixed(3)
+    
+        rayonE()
+    }
 }
 
 perimetre.onchange = function () {
     let number = Number(perimetre.value)
 
-    rayon.value = (number / Tau).toFixed(3)
-    let newRayon = (Number(rayon.value)).toFixed(3)
-    diametre.value = (number / Math.PI).toFixed(3)
-    aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
-
-    perimetreE()
+    if (number <= 0) {
+        alert("entrez un nombre positif!!!")
+    } else {
+        rayon.value = (number / Tau).toFixed(3)
+        let newRayon = (Number(rayon.value)).toFixed(3)
+        diametre.value = (number / Math.PI).toFixed(3)
+        aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
+    
+        perimetreE()
+    }
 }
 
 aire.onchange = function () {
     let number = Number(aire.value)
 
-    rayon.value = (Math.sqrt(number / Math.PI)).toFixed(3)
-    let newRayon = (Number(rayon.value)).toFixed(3)
-    perimetre.value = (Tau * newRayon).toFixed(3)
-    diametre.value = (newRayon * 2).toFixed(3)
-
-    aireE()
+    if (number <= 0) {
+        alert("Entrez un nombre positif!!!")
+    } else {
+        rayon.value = (Math.sqrt(number / Math.PI)).toFixed(3)
+        let newRayon = (Number(rayon.value)).toFixed(3)
+        perimetre.value = (Tau * newRayon).toFixed(3)
+        diametre.value = (newRayon * 2).toFixed(3)
+    
+        aireE()
+    }
 }
 
 diametre.onchange = function () {
     let number = Number(diametre.value)
 
-    rayon.value = (number / 2).toFixed(3)
-    let newRayon = (Number(rayon.value)).toFixed(3)
-    perimetre.value = (Tau * newRayon).toFixed(3)
-    aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
-
-    diametreE()
+    if (number <= 0) {
+        alert("Entrez un nombre positif!!!")
+    } else {
+        rayon.value = (number / 2).toFixed(3)
+        let newRayon = (Number(rayon.value)).toFixed(3)
+        perimetre.value = (Tau * newRayon).toFixed(3)
+        aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
+    
+        diametreE()
+    }
 }
 
 

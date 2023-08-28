@@ -47,7 +47,7 @@ function aireE() {
 
     let rayo = document.createElement("h1")
     rayo.id = "rayo"
-    rayo.innerHTML = `\\(r = \\sqrt{r / \\pi} \\)`
+    rayo.innerHTML = `\\(r = \\sqrt{A / \\pi} \\)`
     ajout.appendChild(rayo)
 
     let perime = document.createElement("h1")
