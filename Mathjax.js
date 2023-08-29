@@ -68,7 +68,7 @@ function diametreE() {
 
     let rayo = document.createElement("h1")
     rayo.id = "rayo"
-    rayo.innerHTML = `\\(r = D * 2 \\)`
+    rayo.innerHTML = `\\(r = D / 2 \\)`
     ajout.appendChild(rayo)
 
     let perime = document.createElement("h1")
