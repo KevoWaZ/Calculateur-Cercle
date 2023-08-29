@@ -87,14 +87,11 @@ diametre.onchange = function () {
 btnReset.onclick = function () {
 
     perimetre.value = ""
-    perimetre.classList.replace("is-danger", "is-link")
     aire.value = ""
-    aire.classList.replace("is-danger", "is-link")
     diametre.value = ""
-    diametre.classList.replace("is-danger", "is-link")
     rayon.value = ""
-    rayon.classList.replace("is-danger", "is-link")
     updateNumbers()
+    dangerToLink()
     let ajout = document.querySelector('.equation')
     ajout.innerHTML = ""
 }
