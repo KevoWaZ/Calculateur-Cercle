@@ -97,8 +97,7 @@ btnReset.onclick = function () {
     rayon.value = ""
     updateNumbers()
     dangerToLink()
-    let ajout = document.querySelector('.equation')
-    ajout.innerHTML = ""
+    resetEquation()
 }
 
 function dangerToLink() {
