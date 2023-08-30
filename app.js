@@ -15,6 +15,7 @@ let Numbers = {
 
 rayon.onchange = function () {
     let number = Number(rayon.value)
+    
 
     if (number <= 0) {
         rayon.classList.replace("is-link", "is-danger")
@@ -24,6 +25,7 @@ rayon.onchange = function () {
         aire.value = (Math.PI * number * number).toFixed(3)
         diametre.value = (number * 2).toFixed(3)
 
+        resetEquation()
         updateNumbers()
         dangerToLink()
         rayonE()
@@ -42,6 +44,7 @@ perimetre.onchange = function () {
         diametre.value = (number / Math.PI).toFixed(3)
         aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
 
+        resetEquation()
         updateNumbers()
         dangerToLink()
         perimetreE()
@@ -60,6 +63,7 @@ aire.onchange = function () {
         perimetre.value = (Tau * newRayon).toFixed(3)
         diametre.value = (newRayon * 2).toFixed(3)
 
+        resetEquation()
         updateNumbers()
         dangerToLink()
         aireE()
@@ -78,6 +82,7 @@ diametre.onchange = function () {
         perimetre.value = (Tau * newRayon).toFixed(3)
         aire.value = (Math.PI * newRayon * newRayon).toFixed(3)
 
+        resetEquation()
         updateNumbers()
         dangerToLink()
         diametreE()
@@ -108,4 +113,9 @@ function updateNumbers() {
     Numbers.diametre = diametre.value
     Numbers.perimetre = perimetre.value
     Numbers.aire = aire.value
+}
+
+function resetEquation() {
+    ajout = document.querySelector('.equation')
+    ajout.innerHTML = ""
 }
