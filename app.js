@@ -16,7 +16,6 @@ let Numbers = {
 rayon.onchange = function () {
     let number = Number(rayon.value)
     
-
     if (number <= 0) {
         rayon.classList.replace("is-link", "is-danger")
         modal.classList.add("is-active")
