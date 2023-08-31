@@ -89,7 +89,6 @@ diametre.onchange = function () {
 }
 
 btnReset.onclick = function () {
-
     perimetre.value = ""
     aire.value = ""
     diametre.value = ""
